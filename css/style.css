@@ -5,3 +5,20 @@ body{
     display: inline-block;
     padding: 50px;
 }
+table{
+    margin: 40px;
+    text-align: center;
+    /* color: #fff; */
+    /* font-size: 30px; */
+}
+
+#sales{
+    background-image: url(../img/Cookies.jpg);
+    background-size: cover;
+}
+#sales header{
+    color: whitesmoke;
+}
+#sales table{
+    opacity: 0.9;
+}
