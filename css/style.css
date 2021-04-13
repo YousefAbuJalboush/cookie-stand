@@ -1,17 +1,42 @@
 body{
     background-color: whitesmoke;
 }
+
+header {
+    background-color: #444;
+    display: flex ;
+    padding: 10px 150px ;
+    /* font-size: 20px; */
+    color: whitesmoke;
+    font-family: Arial;
+}
+header div h1 {
+    padding: 17px 50px;
+    font-size: 22px;
+    font-weight: 500;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+header nav ul li  {
+    display: inline-block;
+    padding: 20px 50px;
+
+}
+header nav ul li a {
+    text-decoration: none;
+    color: whitesmoke;
+    font-size: 16px;
+}
+
+/* **************************************** Sales **************************************** */
+
 #salesCookies div {
     display: inline-block;
     padding: 50px;
 }
-table{
+#sales table{
     margin: 40px;
     text-align: center;
-    /* color: #fff; */
-    /* font-size: 30px; */
 }
-
 #sales{
     background-image: url(../img/Cookies.jpg);
     background-size: cover;
@@ -21,4 +46,81 @@ table{
 }
 #sales table{
     opacity: 0.9;
+}
+
+
+/* **************************************** Home **************************************** */
+#contaner article {
+    margin: 40px 150px;
+    height: 300px;
+    background-color: white;
+}
+#contaner article div:first-child{
+    float: left;
+    width: 49%;
+    background-color: white;
+    height: 300px;
+}
+#contaner article div:last-child{
+    float: right;
+    width: 49%;
+    height: 300px;
+}
+#contaner article div h3 {
+    font-size: 22px;
+    padding: 15px;
+}
+#contaner article div p {
+    font-size: 19px;
+    padding: 15px;
+    text-align: justify;
+}
+#contaner article div img {
+    height: 100%;
+    width: 100%;
+}
+
+/* ***************************************************************************************** */
+
+#locations div {
+    margin: 40px 150px;
+    padding: 25px;
+    background-color: white;
+    font-size: 21px;
+}
+#locations div h3 {
+    padding: 5px;
+}
+#locations div ul li {
+    padding: 10px;
+}
+#locations div ul li a {
+    text-decoration: none;
+}
+
+/* ********************************************************************* */
+
+footer {
+    background-color: #444;
+    display: flex ;
+    padding: 10px 150px ;
+    /* font-size: 20px; */
+    color: whitesmoke;
+    font-family: Arial;
+}
+footer div h1 {
+    padding: 17px 50px;
+    font-size: 22px;
+    font-weight: 500;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+footer nav ul li  {
+    display: inline-block;
+    padding: 20px 50px;
+
+}
+footer nav ul li a {
+    text-decoration: none;
+    color: whitesmoke;
+    font-size: 16px;
 }
