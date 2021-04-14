@@ -5,16 +5,9 @@
 let salesCookies = document.getElementById('salesCookies');
 let table = document.createElement('table');
 salesCookies.appendChild(table);
-table.setAttribute('border','1');
-table.setAttribute('cellpadding','7');
-// table.setAttribute('bgcolor','#2c3034');
-let caption = document.createElement('caption');
-table.appendChild(caption);
-caption.textContent = 'Salmon Cookies Sales';
+table.setAttribute('id','table');
 
 let workHours = ['06:00 am', '07:00 am', '08:00 am', '09:00 am', '10:00 am', '11:00 am', '12:00 pm', '01:00 pm', '02:00 pm', '03:00 pm', '04:00 pm', '05:00 pm', '06:00 pm', '07:00 pm'];
-
-
 let salmonCookieObjects = [];
 function SalmonCookie (cookiesName, minCustomer, maxCustomer, avgCustomer) {
   this.cookiesName = cookiesName;
@@ -72,19 +65,44 @@ SalmonCookie.prototype.render = function () {
 };
 
 
-
-
 for(let i = 0 ; i < salmonCookieObjects.length; i++){
   salmonCookieObjects[i].randomNumber();
   salmonCookieObjects[i].cookiesPurchased();
   // salmonCookieObjects[i].render();
 }
+createTable();
 
-renderTheadTable();
-renderTbodyTable();
-renderTfootTable();
 
-console.log(salmonCookieObjects[0].cookiesPurchasedPerHour[0]);
+const salesForm =document.getElementById('salesForm');
+salesForm.addEventListener('submit', addNewSalmonCookieObjects );
+
+function addNewSalmonCookieObjects( event ) {
+  event.preventDefault();
+
+  let cookiesNameField = event.target.cookiesNameField.value ;
+  let minCustomerField = event.target.minCustomerField.value ;
+  let maxCustomerField = event.target.maxCustomerField.value ;
+  let avgCustomerField = event.target.avgCustomerField.value ;
+
+  let newSalmonCookieObjects = new SalmonCookie(cookiesNameField, minCustomerField, maxCustomerField, avgCustomerField);
+  newSalmonCookieObjects.randomNumber();
+  newSalmonCookieObjects.cookiesPurchased();
+
+  for (let i = 0; i < salmonCookieObjects.length +1; i++) {
+    document.getElementById('table').deleteRow(-1);
+  }
+  createTable();
+}
+
+
+function createTable() {
+  table.setAttribute('border','1');
+  table.setAttribute('cellpadding','7');
+  // table.setAttribute('bgcolor','#2c3034');
+  renderTheadTable();
+  renderTbodyTable();
+  renderTfootTable();
+}
 
 
 function renderTheadTable () {
