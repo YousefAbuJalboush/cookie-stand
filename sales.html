@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
@@ -24,6 +24,31 @@
         </nav>
     </header>
     <main>
+        <form id="salesForm">
+            <fieldset>
+                <legend>Add New Salmon Cookies Sales :</legend>
+                <div>
+                    <label for="cookiesNameField">Cookies Name :</label>
+                    <input type="text" id="cookiesNameField" required>
+                </div>
+                <div>
+                    <label for="minCustomerField">Min Customer : </label>
+                    <input type="number" id="minCustomerField" required>
+                </div>
+                <div>
+                    <label for="maxCustomerField">Max Customer : </label>
+                    <input type="number" id="maxCustomerField" required>
+                </div>
+                <div>
+                    <label for="avgCustomerField">Avg Customer : </label>
+                    <input type="number" id="avgCustomerField" step="0.01" required>
+                </div>
+                <div>
+                    <input type="submit" id="submitField" value="Submit" required>
+                </div>
+
+            </fieldset>
+        </form>
         <section id="salesCookies">
 
         </section>

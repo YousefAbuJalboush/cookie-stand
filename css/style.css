@@ -207,6 +207,7 @@ footer nav ul li a {
     font-size: 16px;
 }
 
+
 /* ******************************************************************* */
 
 #photo {
@@ -232,4 +233,22 @@ footer nav ul li a {
 #photo div p {
     padding: 7px;
     font-size: 20px;
+
+
+/* **************************************************************** */
+form{
+    background-color: whitesmoke;
+    opacity: .9;
+    width: 300px;
+    margin: 2% 35%;
+    padding: 20px;
+}
+form div {
+    padding: 10px;
+    text-align: center;
+}
+form div input[type="submit"] {
+    padding: 7px 15px;
+    background-color: powderblue;
+
 }
