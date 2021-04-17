@@ -1,30 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=New+Tegomin&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,300&display=swap');
+
+
+
 body{
     background-color: whitesmoke;
+    padding: 0px 100px;
+    overflow-x: hidden;
 }
+
 
 header {
     background-color: #444;
     display: flex ;
-    padding: 10px 150px ;
-    /* font-size: 20px; */
+    padding: 10px 25px ;
     color: whitesmoke;
     font-family: Arial;
+    /* position: relative; */
+    position: fixed;
+    width: 83.62%;
+    z-index: 1;
+    
+}
+/* #headerSales{
+    margin-top: -40px;
+} */
+nav{
+    width: 75%;
+    position: relative;
 }
 header div h1 {
-    padding: 17px 50px;
-    font-size: 22px;
+    padding: 10px 50px;
+    font-size: 35px;
     font-weight: 500;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Dancing Script', cursive;
 }
 header nav ul li  {
     display: inline-block;
-    padding: 20px 50px;
-
+    padding: 15px 50px;
 }
+
+header nav ul li:last-child  {
+    position: absolute;
+    right: 0;
+}
+header nav ul li:last-child input {
+    height: 30px;
+}
+header nav ul li:last-child input:hover {
+    box-shadow: 3px 3px rgba(0, 255, 255, 0.521);
+    /* border: cyan 4px double; */
+}
+header nav ul li:last-child img{
+    margin-left: -25px;
+    margin-bottom: -6px;
+    width: 24px;
+}
+
 header nav ul li a {
     text-decoration: none;
     color: whitesmoke;
-    font-size: 16px;
+    font-size: 20px;
+    /* font-family: 'Dancing Script', cursive; */
+    font-family: 'New Tegomin', serif;
+}
+header nav ul li a:hover{
+    font-size: 23px ;
+    color: cyan ;
 }
 
 /* **************************************** Sales **************************************** */
@@ -32,9 +75,13 @@ header nav ul li a {
 #salesCookies div {
     display: inline-block;
     padding: 50px;
+    position: relative;
 }
 #sales table{
-    margin: 40px;
+    /* margin: 40px; */
+    top: 400px;
+    left: 50px;
+    position: absolute;
     text-align: center;
 }
 #sales{
@@ -50,52 +97,87 @@ header nav ul li a {
 
 
 /* **************************************** Home **************************************** */
-#contaner article {
-    margin: 40px 150px;
-    height: 300px;
+
+#contaner article{
+    display: inline-block;
+    width: 23%;
+    height: 500px;
     background-color: white;
-}
-#contaner article div:first-child{
-    float: left;
-    width: 49%;
-    background-color: white;
-    height: 300px;
-}
-#contaner article div:last-child{
-    float: right;
-    width: 49%;
-    height: 300px;
-}
-#contaner article div h3 {
-    font-size: 22px;
-    padding: 15px;
-}
-#contaner article div p {
-    font-size: 19px;
-    padding: 15px;
     text-align: justify;
+    margin: 11.6px;
+    box-shadow: 10px 15px 10px #888888;
+    position: relative;
+
 }
-#contaner article div img {
-    height: 100%;
+#contaner article img{
     width: 100%;
+    height: 200px;
+}
+#contaner article div:last-child {
+    padding: 20px;
+}
+#contaner article div:last-child h3 {
+    font-size: 23px;
+    font-family: 'New Tegomin', serif;
+    padding-bottom: 15px ;
+}
+#contaner article div:last-child p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+#contaner article div:last-child input {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 7px 15px;
+    position: absolute;
+    bottom: 10px;
+    left: 90px;
+    background-color: #444;
+    color: whitesmoke;
+}
+#section2 {
+    margin-left: 160px;
+    width: 100%;
+    margin-bottom: 50px;
+    
 }
 
 /* ***************************************************************************************** */
-
-#locations div {
-    margin: 40px 150px;
-    padding: 25px;
+#locations{
     background-color: white;
-    font-size: 21px;
+    margin: 40px 0px;
+    padding: 30px;
+    height: 400px;
 }
-#locations div h3 {
+
+#locations div:first-child {
+    font-size: 21px;
+    float: left;
+    width: 50%;
+    font-family: monospace;
+}
+#locations div:first-child h3 {
     padding: 5px;
 }
-#locations div ul li {
+#locations div:first-child ul li {
     padding: 10px;
 }
-#locations div ul li a {
+#locations div:first-child ul li a {
     text-decoration: none;
+}
+#locations div:first-child ul li a:hover {
+    color: blue;
+}
+#locations div:first-child p {
+    padding: 40px 10px;
+}
+
+#location div:last-child{
+    float: right;
+    width: 50%;
 }
 
 /* ********************************************************************* */
@@ -126,6 +208,33 @@ footer nav ul li a {
 }
 
 
+/* ******************************************************************* */
+
+#photo {
+    background-image: url(../img/photo2.jpeg);
+    background-size: cover;
+    height: 600px;
+    position: relative;
+}
+
+#photo div {
+    text-align: justify;
+    padding: 50px;
+    color: whitesmoke;
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    font-family: 'New Tegomin', serif;
+}
+#photo div h3 {
+    font-size: 30px;
+    padding: 10px;
+}
+#photo div p {
+    padding: 7px;
+    font-size: 20px;
+
+
 /* **************************************************************** */
 form{
     background-color: whitesmoke;
@@ -141,4 +250,5 @@ form div {
 form div input[type="submit"] {
     padding: 7px 15px;
     background-color: powderblue;
+
 }
