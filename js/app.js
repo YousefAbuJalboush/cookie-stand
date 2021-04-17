@@ -1,5 +1,6 @@
 'use strict';
 
+
 // ************************************************ Class07-Object-Constructor  ************************************************
 
 let salesCookies = document.getElementById('salesCookies');
